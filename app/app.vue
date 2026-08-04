@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = "Nuxt Email Renderer";
+const title = "MGIV - Inspeção Veícular LTDA";
 
 useHead({
   meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
@@ -11,6 +11,7 @@ useHead({
 useSeoMeta({
   title,
   ogTitle: title,
+  description: "Inspeção Veicular LTDA",
 });
 </script>
 

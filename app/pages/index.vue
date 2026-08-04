@@ -1,3 +1,4 @@
 <template>
-  <Hero />
+  <AppHeader />
+  <AppHero />
 </template>
