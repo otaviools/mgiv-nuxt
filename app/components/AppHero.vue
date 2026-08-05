@@ -5,6 +5,8 @@ const links = ref<ButtonProps[]>([
   {
     label: "Contato",
     to: "/docs/getting-started",
+    color: "primary",
+    variant: "solid",
   },
   {
     label: "Serviços",
@@ -21,15 +23,15 @@ const links = ref<ButtonProps[]>([
     :ui="{
       container: 'w-full md:justify-center md:text-center',
       title: 'text-primary-700 max-w-md mx-auto md:text-10xl',
-      description: 'text-gray-800 max-w-lg mx-auto md:text-lg',
-      links: 'text-primary-900',
+      description: 'text-secondary-800 max-w-lg mx-auto md:text-lg',
+      links: 'text-secondary-900',
     }"
-    description="Com equipe técnica qualificada, certificada e acreditada pelo Inmetro. "
+    description="Com equipe técnica qualificada, certificada e acreditada pelo Inmetro"
     :links="links"
   >
     <template #title>
-      seu veículo
-      <span class="text-primary-500">Inspecionado.</span>
+      Seu veículo
+      <span class="text-primary-500">Inspecionado</span>
     </template>
   </UPageHero>
 </template>

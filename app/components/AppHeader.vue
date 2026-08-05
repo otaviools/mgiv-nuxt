@@ -23,8 +23,8 @@ const menulinks = [
           v-for="link in menulinks"
           :key="link.to"
           :to="link.to"
-          active-class="text-primary-500"
-          inactive-class="text-gray-500 hover:text-primary-400 transition-colors duration-200"
+          active-class="text-primary-400"
+          inactive-class="text-secondary-500 hover:text-primary-400 transition-colors duration-200"
           class="text-sm"
         >
           {{ link.label }}
