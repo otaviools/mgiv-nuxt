@@ -22,16 +22,21 @@ const links = ref<ButtonProps[]>([
     style="font-family: var(--font-sans)"
     :ui="{
       container: 'w-full md:justify-center md:text-center',
-      title: 'text-primary-700 max-w-md mx-auto md:text-10xl',
+      title: 'text-primary-700  max-w-xl mx-auto md:text-8xl',
       description: 'text-secondary-800 max-w-lg mx-auto md:text-lg',
       links: 'text-secondary-900',
     }"
-    description="Com equipe técnica qualificada, certificada e acreditada pelo Inmetro"
     :links="links"
   >
     <template #title>
       Seu veículo
       <span class="text-primary-500">Inspecionado</span>
+    </template>
+    <template #description>
+      <span class="text-secondary-700"
+        >Com equipe técnica qualificada, certificada e acreditada pelo</span
+      >
+      <span class="text-primary-500"> Inmetro</span>
     </template>
   </UPageHero>
 </template>

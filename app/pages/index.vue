@@ -2,4 +2,5 @@
   <AppHeader />
   <AppHero />
   <AppSectionAbout />
+  <AppCards />
 </template>

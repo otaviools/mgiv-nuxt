@@ -16,7 +16,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp>
-    <NuxtPage />
-  </UApp>
+  <div class="min-h-screen" style="background-color: #f7f7f7">
+    <UApp>
+      <NuxtPage />
+    </UApp>
+  </div>
 </template>

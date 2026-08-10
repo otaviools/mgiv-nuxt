@@ -48,11 +48,9 @@ const features = ref<PageFeatureProps[]>([
     }"
   >
     <img
-      src="https://picsum.photos/704/1294"
-      width="352"
-      height="522"
-      alt="Illustration"
-      class="w-full rounded-lg"
+      src="https://mgiv.com.br/img/fotos/sobre2.webp"
+      alt="Imagem de destaque"
+      class="hidden md:block m-auto w-120 rounded-lg"
       loading="lazy"
     />
     <template #title>

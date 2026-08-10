@@ -4,3 +4,7 @@
 @theme {
   --font-sans: "Public Sans", sans-serif;
 }
+:root {
+  --ui-bg: #f7f7f7;
+  --ui-container: 1600px;
+}
