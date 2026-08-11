@@ -40,7 +40,7 @@ const services = [
 </script>
 
 <template>
-  <UContainer>
+  <UContainer class="mb-20">
     <UPageHeader
       :ui="{
         root: 'border-none',

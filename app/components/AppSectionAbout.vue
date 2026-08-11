@@ -47,12 +47,6 @@ const features = ref<PageFeatureProps[]>([
       container: 'lg:items-start',
     }"
   >
-    <img
-      src="https://mgiv.com.br/img/fotos/sobre2.webp"
-      alt="Imagem de destaque"
-      class="hidden md:block m-auto w-120 rounded-lg"
-      loading="lazy"
-    />
     <template #title>
       <span class="text-primary-700">Você regulariza seu</span>
       <span class="text-primary-500"> veículo </span>
