@@ -47,13 +47,13 @@ const links = ref<ButtonProps[]>([
     title="BR-262"
     description="Localizada ao lado da BR-262, facilitando o fluxo de transportadoras de produtos perigosos, ônibus e veículos modificados."
     orientation="horizontal"
-    reverse
     :features="features"
     :ui="{
-      title: 'text-primary-600',
+      title: 'text-primary-500',
       description: 'text-secondary-600',
       features: 'gap-8',
       container: 'lg:items-start',
+      wrapper: 'lg:order-last',
     }"
     :links="links"
   >

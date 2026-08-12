@@ -13,12 +13,14 @@ const links = ref<ButtonProps[]>([
     to: "/docs/getting-started/theme/design-system",
     color: "neutral",
     variant: "subtle",
+    class: "ring-secondary-400",
   },
 ]);
 </script>
 
 <template>
   <UPageHero
+    class="mb-10"
     style="font-family: var(--font-sans)"
     :ui="{
       container: 'w-full md:justify-center md:text-center',

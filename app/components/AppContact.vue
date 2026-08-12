@@ -37,46 +37,79 @@ const form = reactive({
         >gerencia.mgiv@hotmail.com</a
       >
     </template>
+    <img src="./images/BRMG.svg" alt="mg" class="hidden lg:block" />
 
     <template #body>
       <UForm
         :state="form"
-        class="text-secondary-700 grid grid-cols-1 gap-4 sm:grid-cols-2"
+        class="text-secondary-700 grid grid-cols-1 gap-8 sm:grid-cols-2"
       >
-        <UFormField label="Nome" name="nome" required>
+        <UFormField
+          label="Nome"
+          name="nome"
+          required
+          :ui="{ label: 'text-secondary-900' }"
+        >
           <UInput
             v-model="form.nome"
             icon="lucide-user"
             placeholder="Nome Sobrenome"
             class="w-full"
+            :ui="{
+              base: 'text-secondary-900 ring-secondary-300 placeholder:text-secondary-400 focus-visible:ring-primary-600',
+            }"
           />
         </UFormField>
 
-        <UFormField label="Email" name="email" required>
+        <UFormField
+          label="Email"
+          name="email"
+          required
+          :ui="{ label: 'text-secondary-900' }"
+        >
           <UInput
             v-model="form.email"
             type="email"
             icon="lucide-mail"
             placeholder="nome@email.com"
             class="w-full"
+            :ui="{
+              base: 'text-secondary-900 ring-secondary-300 placeholder:text-secondary-400',
+            }"
           />
         </UFormField>
 
-        <UFormField label="Telefone" name="telefone" required>
+        <UFormField
+          label="Telefone"
+          name="telefone"
+          required
+          :ui="{ label: 'text-secondary-900' }"
+        >
           <UInput
             v-model="form.telefone"
             icon="lucide-phone"
             placeholder="34999999999"
             class="w-full"
+            :ui="{
+              base: 'text-secondary-900 ring-secondary-300 placeholder:text-secondary-400',
+            }"
           />
         </UFormField>
 
-        <UFormField label="Mensagem" name="mensagem" required>
+        <UFormField
+          label="Mensagem"
+          name="mensagem"
+          required
+          :ui="{ label: 'text-secondary-900' }"
+        >
           <UInput
             v-model="form.mensagem"
             icon="lucide-message-circle"
             placeholder="O que você precisa ?"
             class="w-full"
+            :ui="{
+              base: 'text-secondary-900 ring-secondary-300 placeholder:text-secondary-400',
+            }"
           />
         </UFormField>
 
@@ -84,7 +117,7 @@ const form = reactive({
           type="submit"
           label="Enviar"
           trailing-icon="lucide-send"
-          class="w-fit sm:col-span-2"
+          class="w-fit sm:col-span-2 mt-6"
         />
       </UForm>
     </template>

@@ -40,7 +40,8 @@ const services = [
 </script>
 
 <template>
-  <UContainer class="mb-20">
+  <!-- Mesmo ritmo vertical do UPageSection (py-16 sm:py-24 lg:py-32) -->
+  <UContainer class="py-16 sm:py-24 lg:py-32">
     <UPageHeader
       :ui="{
         root: 'border-none',

@@ -1,20 +1,20 @@
 <script setup lang="ts">
 const menulinks = [
-  { label: "Início", to: "/" },
-  { label: "Sobre", to: "/sobre" },
-  { label: "Serviços", to: "/servicos" },
-  { label: "Local", to: "/local" },
-  { label: "Contato", to: "/contato" },
+  { label: "Início", to: "#inicio" },
+  { label: "Sobre", to: "#sobre" },
+  { label: "Serviços", to: "#servicos" },
+  { label: "Local", to: "#local" },
+  { label: "Contato", to: "#contato" },
 ];
 </script>
 
 <template>
   <header
-    class="w-full border-b border-gray-200"
+    class="bg-(--ui-bg)/90 sticky top-0 z-50 w-full border-b border-gray-200 backdrop-blur-md"
     style="font-family: var(--font-sans)"
   >
-    <UContainer class="flex items-center justify-between h-20">
-      <NuxtLink to="/">
+    <UContainer class="flex h-20 items-center justify-between">
+      <NuxtLink to="#inicio">
         <img src="./images/logo-4.svg" alt="Logo" class="h-12 w-auto" />
       </NuxtLink>
 
