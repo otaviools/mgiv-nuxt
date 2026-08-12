@@ -37,7 +37,7 @@ const form = reactive({
         >gerencia.mgiv@hotmail.com</a
       >
     </template>
-    <img src="./images/BRMG.svg" alt="mg" class="hidden lg:block" />
+    <img src="./images/BRMG.svg" alt="mg" class="hidden lg:block ml-20" />
 
     <template #body>
       <UForm

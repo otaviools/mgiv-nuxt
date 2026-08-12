@@ -28,7 +28,6 @@ const cards = ref([
 <template>
   <UPageCTA
     :ui="{
-      title: 'text-primary-700 ',
       description: 'text-secondary-600',
       root: 'ring-0',
       wrapper: 'mr-0 sm:mr-20',
@@ -41,15 +40,14 @@ const cards = ref([
     variant="naked"
   >
     <template #title>
-      <span class="text-primary-700">Conheça a nossa</span>
-      <span class="text-primary-500"> história </span>
+      <span class="text-primary-700 text-3xl sm:text-5xl">Conheça a nossa</span>
+      <span class="text-primary-500 text-3xl sm:text-5xl"> história </span>
     </template>
     <UCarousel
       v-slot="{ item }"
       loop
-      arrows
-      dots
-      :autoplay="{ delay: 2000 }"
+      auto-scroll
+      :watch-drag="false"
       :items="items"
       :ui="{ item: 'basis-1/3' }"
     >

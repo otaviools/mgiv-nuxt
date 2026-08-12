@@ -44,7 +44,7 @@ const links = ref<ButtonProps[]>([
 
 <template>
   <UPageSection
-    title="BR-262"
+    class="mb-16"
     description="Localizada ao lado da BR-262, facilitando o fluxo de transportadoras de produtos perigosos, ônibus e veículos modificados."
     orientation="horizontal"
     :features="features"
@@ -52,11 +52,15 @@ const links = ref<ButtonProps[]>([
       title: 'text-primary-500',
       description: 'text-secondary-600',
       features: 'gap-8',
-      container: 'lg:items-start',
+      container: 'lg:items-center',
       wrapper: 'lg:order-last',
     }"
     :links="links"
   >
+    <template #title>
+      <span class="text-primary-800">Onde</span>
+      <span class="text-primary-500"> estamos ?</span>
+    </template>
     <ClientOnly>
       <Map
         :center="center"

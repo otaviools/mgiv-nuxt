@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const menulinks = [
   { label: "Início", to: "#inicio" },
-  { label: "Sobre", to: "#sobre" },
+  { label: "Quem somos", to: "#historia" },
   { label: "Serviços", to: "#servicos" },
   { label: "Local", to: "#local" },
   { label: "Contato", to: "#contato" },
