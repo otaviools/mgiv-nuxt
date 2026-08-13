@@ -40,7 +40,6 @@ const services = [
 </script>
 
 <template>
-  <!-- Mesmo ritmo vertical do UPageSection (py-16 sm:py-24 lg:py-32) -->
   <UContainer class="py-16 sm:py-24 lg:py-32">
     <UPageHeader
       :ui="{
@@ -53,7 +52,11 @@ const services = [
 
     <UPageGrid class="lg:grid-cols-3">
       <UPageCard
-        :ui="{ title: 'text-secondary-700', description: 'text-secondary-500' }"
+        :ui="{
+          title: 'text-secondary-700',
+          description: 'text-secondary-500',
+          leadingIcon: 'size-7',
+        }"
         v-for="service in services"
         :key="service.title"
         :icon="service.icon"

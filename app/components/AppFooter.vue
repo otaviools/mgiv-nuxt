@@ -11,7 +11,6 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <!-- Só padding-top: nada vem depois, e o USeparator abaixo já dá o respiro final. -->
   <UContainer class="sm:pt-24 lg:pt-32">
     <UFooter class="text-secondary-600">
       <template #left>

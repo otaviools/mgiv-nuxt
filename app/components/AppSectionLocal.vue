@@ -8,15 +8,13 @@ import {
   MarkerPopup,
 } from "@/components/ui/map";
 
-// Coordenadas aproximadas de Córrego Danta - MG (BR-262).
-// Ajuste para o ponto exato da unidade.
 const center: [number, number] = [-45.9036, -19.8347];
 
 const features = ref<PageFeatureProps[]>([
   {
     title: "Horário de funcionamento",
     description: "Segunda à Sexta - 08:00 - 17:45",
-    icon: "lucide-badge-check",
+    icon: "lucide-clock",
     ui: {
       title: "text-secondary-900",
       description: "text-secondary-600",
@@ -25,7 +23,7 @@ const features = ref<PageFeatureProps[]>([
   {
     title: "Localização",
     description: "Rodovia BR 262, Km 577 Zona Rural, Córrego Danta -MG",
-    icon: "lucide-cog",
+    icon: "lucide-map-pin",
     ui: {
       title: "text-secondary-900",
       description: "text-secondary-600",
@@ -38,6 +36,9 @@ const links = ref<ButtonProps[]>([
     to: "/docs/getting-started",
     trailingIcon: "lucide-arrow-right",
     color: "primary",
+    ui: {
+      base: "py-3 px-4",
+    },
   },
 ]);
 </script>

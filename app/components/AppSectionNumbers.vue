@@ -16,7 +16,6 @@ const cards = ref([
 </script>
 
 <template>
-  <!-- Mesmo ritmo vertical do UPageSection (py-16 sm:py-24 lg:py-32) -->
   <UContainer class="mb-16 sm:mb-24 lg:mb-40">
     <UPageGrid class="grid-cols-3 sm:grid-cols-3 gap-2 sm:gap-8">
       <UPageCard

@@ -7,6 +7,9 @@ const links = ref<ButtonProps[]>([
     to: "/docs/getting-started",
     color: "primary",
     variant: "solid",
+    ui: {
+      base: "py-3 px-4",
+    },
   },
   {
     label: "Serviços",
@@ -14,6 +17,9 @@ const links = ref<ButtonProps[]>([
     color: "neutral",
     variant: "subtle",
     class: "ring-secondary-400",
+    ui: {
+      base: "py-3 px-4",
+    },
   },
 ]);
 </script>
