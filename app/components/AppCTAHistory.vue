@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { ButtonProps } from "@nuxt/ui";
 const items = [
   "https://picsum.photos/468/468?random=1",
   "https://picsum.photos/468/468?random=2",
@@ -31,7 +30,6 @@ const cards = ref([
       description: 'text-secondary-600',
       root: 'ring-0',
       wrapper: 'mr-0 sm:mr-20',
-      // UPageCTA vem com py-12 sm:py-24 lg:py-24; alinhamos ao ritmo das demais seções.
       container: 'py-16 sm:py-24 lg:py-32',
     }"
     title="Conheça a nossa história"
