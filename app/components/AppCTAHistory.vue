@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import faixadaprincipal from "./images/faixadaprincipal.png";
+import faixadasecundaria from "./images/faixadasecundaria.png";
+
 const items = [
-  "https://picsum.photos/468/468?random=1",
-  "https://picsum.photos/468/468?random=2",
-  "https://picsum.photos/468/468?random=3",
-  "https://picsum.photos/468/468?random=4",
-  "https://picsum.photos/468/468?random=5",
-  "https://picsum.photos/468/468?random=6",
+  { src: faixadaprincipal, class: "basis-2/3" },
+  { src: faixadasecundaria, class: "basis-2/3" },
+  { src: faixadaprincipal, class: "basis-2/3" },
+  { src: faixadasecundaria, class: "basis-2/3" },
+  { src: faixadaprincipal, class: "basis-2/3" },
+  { src: faixadasecundaria, class: "basis-2/3" },
 ];
 
 const cards = ref([
@@ -50,10 +53,10 @@ const cards = ref([
       :ui="{ item: 'basis-1/3' }"
     >
       <img
-        :src="item"
+        :src="item.src"
         width="234"
         height="234"
-        class="rounded-lg"
+        class="h-full w-full rounded-lg object-cover"
         loading="lazy"
       />
     </UCarousel>

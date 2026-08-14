@@ -5,7 +5,7 @@ const cards = ref([
     description: "Satisfação",
   },
   {
-    title: "+100",
+    title: "+500",
     description: "Serviços feitos",
   },
   {
@@ -16,13 +16,15 @@ const cards = ref([
 </script>
 
 <template>
-  <UContainer class="mb-16 sm:mb-24 lg:mb-40">
-    <UPageGrid class="grid-cols-3 sm:grid-cols-3 gap-2 sm:gap-8">
+  <UContainer class="mb-0 sm:mb-16">
+    <UPageGrid
+      class="grid-cols-3 gap-2 divide-x divide-gray-300 sm:grid-cols-3 sm:gap-8"
+    >
       <UPageCard
         :ui="{
-          wrapper: 'w-full items-center bg-none md:bg-white md:py-6 rounded-lg',
+          wrapper: 'w-full items-center bg-none md:py-4 rounded-lg',
           container: 'items-center text-center p-2 sm:p-6',
-          title: 'text-primary-500 text-3xl sm:text-4xl',
+          title: 'text-primary-500 text-3xl sm:text-6xl',
           description: 'text-secondary-700 text-xs sm:text-base',
         }"
         v-for="(card, index) in cards"
