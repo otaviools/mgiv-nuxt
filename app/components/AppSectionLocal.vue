@@ -1,14 +1,35 @@
 <script setup lang="ts">
 import type { PageFeatureProps, ButtonProps } from "@nuxt/ui";
-import {
-  Map,
-  MapControls,
-  MapMarker,
-  MarkerContent,
-  MarkerPopup,
-} from "@/components/ui/map";
 
 const center: [number, number] = [-45.9036, -19.8347];
+
+// O maplibre-gl é o maior pedaço de JS do site. Carregamos o mapa só quando a
+// seção entra na viewport, em vez de junto do bundle inicial.
+const mapSlot = useTemplateRef<HTMLElement>("mapSlot");
+const isMapVisible = ref(false);
+
+onMounted(() => {
+  if (!mapSlot.value) return;
+
+  // Cobre quem entra direto em #local: a seção já está visível na montagem.
+  const rect = mapSlot.value.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    isMapVisible.value = true;
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry?.isIntersecting) return;
+      isMapVisible.value = true;
+      observer.disconnect();
+    },
+    { rootMargin: "200px" },
+  );
+
+  observer.observe(mapSlot.value);
+  onBeforeUnmount(() => observer.disconnect());
+});
 
 const features = ref<PageFeatureProps[]>([
   {
@@ -59,37 +80,18 @@ const links = ref<ButtonProps[]>([
     :links="links"
   >
     <template #title>
-      <span class="text-primary-800">Onde</span>
-      <span class="text-primary-500"> estamos ?</span>
+      <span class="text-primary-800">Fácil de chegar, sempre</span>
+      <span class="text-primary-500"> perto de você</span>
     </template>
-    <ClientOnly>
-      <Map
-        :center="center"
-        :zoom="13.2"
-        class="h-96 w-full rounded-lg"
-        :scroll-zoom="false"
-        theme="light"
-      >
-        <MapControls />
+    <div ref="mapSlot" class="w-full">
+      <ClientOnly>
+        <LazyAppLocalMap v-if="isMapVisible" :center="center" />
+        <div v-else class="bg-secondary-100 h-96 w-full animate-pulse rounded-lg" />
 
-        <MapMarker :longitude="center[0]" :latitude="center[1]">
-          <MarkerContent>
-            <UIcon name="i-lucide-map-pin" class="text-primary-500 size-8" />
-          </MarkerContent>
-
-          <MarkerPopup>
-            <div class="text-secondary-800 text-sm">
-              <p class="text-primary-700 font-bold">MGIV</p>
-              <p class="text-secondary-600">Rodovia BR 262, Km 577</p>
-              <p class="text-secondary-600">Córrego Danta - MG</p>
-            </div>
-          </MarkerPopup>
-        </MapMarker>
-      </Map>
-
-      <template #fallback>
-        <div class="bg-secondary-100 h-96 w-full animate-pulse rounded-lg" />
-      </template>
-    </ClientOnly>
+        <template #fallback>
+          <div class="bg-secondary-100 h-96 w-full animate-pulse rounded-lg" />
+        </template>
+      </ClientOnly>
+    </div>
   </UPageSection>
 </template>

@@ -6,11 +6,13 @@ const menulinks = [
   { label: "Local", to: "#local" },
   { label: "Contato", to: "#contato" },
 ];
+
+const isMenuOpen = ref(false);
 </script>
 
 <template>
   <header
-    class="bg-(--ui-bg)/90 sticky top-0 z-50 w-full border-b border-gray-200 backdrop-blur-md"
+    class="bg-(--ui-bg) sticky top-0 z-50 w-full border-b border-gray-200/60"
     style="font-family: var(--font-sans)"
   >
     <UContainer class="flex h-20 items-center justify-between">
@@ -18,13 +20,53 @@ const menulinks = [
         <img src="./images/logo-4.svg" alt="Logo" class="h-12 w-auto" />
       </NuxtLink>
 
+      <!-- Entra pela direita deslizando para a esquerda (side="right"). -->
+      <USlideover
+        v-model:open="isMenuOpen"
+        side="right"
+        title="Menu"
+        :ui="{
+          /* `duration`/`ease` alongam a animação de slide padrão (200ms). */
+          content:
+            /* `divide-y-0` remove a linha padrão entre o header (X) e o corpo. */
+            'w-72 max-w-[80vw] divide-y-0 data-[state=open]:animate-[slide-in-from-right_400ms_ease-out] data-[state=closed]:animate-[slide-out-to-right_300ms_ease-in]',
+          overlay:
+            'backdrop-blur-sm data-[state=open]:animate-[fade-in_400ms_ease-out] data-[state=closed]:animate-[fade-out_300ms_ease-in]',
+        }"
+        class="md:hidden"
+      >
+        <UButton
+          icon="i-lucide-menu"
+          color="neutral"
+          variant="ghost"
+          size="xl"
+          aria-label="Abrir menu"
+          class="text-primary-700 transition-colors duration-200"
+        />
+
+        <template #body>
+          <!-- Fecha no clique de qualquer link (delegação, o @click direto no
+               ULink não chega ao elemento renderizado). -->
+          <nav class="flex flex-col gap-1" @click="isMenuOpen = false">
+            <ULink
+              v-for="link in menulinks"
+              :key="link.to"
+              :to="link.to"
+              inactive-class="text-secondary-700"
+              class="hover:bg-primary-50 hover:text-primary-600 rounded-lg px-3 py-3 text-base transition-colors duration-200"
+            >
+              {{ link.label }}
+            </ULink>
+          </nav>
+        </template>
+      </USlideover>
+
       <nav class="hidden md:flex gap-8">
         <ULink
           v-for="link in menulinks"
           :key="link.to"
           :to="link.to"
-          active-class="text-primary-400"
-          inactive-class="text-secondary-500 hover:text-primary-400 transition-colors duration-200"
+          inactive-class="text-secondary-700 transition-colors duration-200"
           class="text-sm"
         >
           {{ link.label }}

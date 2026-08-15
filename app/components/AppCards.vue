@@ -41,18 +41,25 @@ const services = [
 
 <template>
   <UContainer class="py-16 sm:py-24 lg:py-32">
-    <UPageHeader
-      :ui="{
-        root: 'border-none',
-        title: 'text-primary-700',
-      }"
-      title="Serviços"
-      headline="Qualidade"
-    />
+    <!-- Marcação equivalente à do UPageHeader (mesmas classes), só que com
+         <h2>: o componente fixa <h1> e a página já tem o <h1> do hero. -->
+    <div class="relative py-8">
+      <div
+        class="text-primary mb-2.5 flex items-center gap-1.5 text-sm font-semibold"
+      >
+        Qualidade
+      </div>
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <h2 class="text-primary-700 text-3xl text-pretty font-bold sm:text-4xl">
+          Serviços
+        </h2>
+      </div>
+    </div>
 
     <UPageGrid class="lg:grid-cols-3">
       <UPageCard
         :ui="{
+          root: 'rounded-2xl ring-1 ring-gray-200/70 shadow-sm',
           title: 'text-secondary-700',
           description: 'text-secondary-500',
           leadingIcon: 'size-7',
