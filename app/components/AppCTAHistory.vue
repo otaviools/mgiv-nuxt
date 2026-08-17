@@ -15,7 +15,8 @@ const items = [
 <template>
   <UPageCTA
     :ui="{
-      description: 'text-secondary-600 mb-10',
+      description: 'text-secondary-600 sm:mb-10',
+      title: 'sm:mb-10',
       root: 'ring-0',
       wrapper: 'mr-0 sm:mr-20',
       container: 'px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32',
@@ -26,7 +27,7 @@ const items = [
   >
     <template #title>
       <span
-        class="text-primary-500 mb-5 block text-xs font-medium tracking-[0.2em] uppercase sm:text-sm"
+        class="text-secondary-500 mb-5 block text-xs font-bold tracking-[0.1em] uppercase sm:text-sm"
       >
         Quem somos
       </span>
@@ -34,25 +35,21 @@ const items = [
       <span class="text-primary-500 text-3xl sm:text-5xl"> história </span>
     </template>
 
-    <!-- O slot #body do UPageCTA fica logo abaixo da descrição. -->
     <template #body>
       <AppSectionNumbers />
     </template>
     <UCarousel
       v-slot="{ item }"
       loop
-      auto-scroll
       :watch-drag="false"
       :items="items"
       :ui="{ item: 'basis-1/3' }"
     >
-      <!-- width/height com a proporção real do arquivo: atributos fora de
-           proporção são apontados pelo Lighthouse e causam reflow. -->
       <img
         :src="item.src"
         alt="Instalações e serviços da MGIV"
-        width="700"
-        height="490"
+        width="900"
+        height="600"
         class="h-full w-full rounded-lg object-cover"
         loading="lazy"
         decoding="async"

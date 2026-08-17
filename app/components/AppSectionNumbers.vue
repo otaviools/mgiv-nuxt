@@ -26,7 +26,7 @@ const cards = ref([
             'w-full items-center lg:items-start bg-none md:py-4 rounded-lg',
           /* Sem padding horizontal para o primeiro número encostar na mesma
              borda esquerda do container (título e descrição). */
-          container: 'items-start text-left px-0 py-2 sm:px-0 sm:py-6',
+          container: 'items-start text-center px-0 py-2 sm:px-0 sm:py-6',
           title: 'text-primary-600 text-3xl sm:text-4xl',
           description: 'text-secondary-700 text-xs sm:text-sm',
         }"

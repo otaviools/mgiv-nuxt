@@ -58,15 +58,9 @@ const links = ref<ButtonProps[]>([
             class="h-full w-full object-cover object-right"
           />
           <div
-            class="absolute inset-0 bg-linear-to-r from-[#0a1b2e] via-[#0a1b2e]/85 to-transparent"
+            class="absolute inset-0 bg-linear-to-r from-[#0a1b2e] via-[#0a1b2e]/70 to-transparent"
           />
-          <div class="absolute inset-0 bg-[#0a1b2e]/30" />
-          <!-- Fade da foto para o fundo da página, evitando o corte seco na base.
-               Stops intermediários suavizam a rampa (um linear puro cria uma
-               "linha" visível onde o gradiente começa). -->
-          <div
-            class="absolute inset-x-0 bottom-0 h-64 bg-[linear-gradient(to_bottom,rgba(247,247,247,0)_0%,rgba(247,247,247,0.06)_25%,rgba(247,247,247,0.2)_45%,rgba(247,247,247,0.45)_65%,rgba(247,247,247,0.75)_82%,rgba(247,247,247,1)_100%)] sm:h-80"
-          />
+          <div class="absolute inset-0 bg-[#0a1b2e]/70" />
         </div>
       </template>
 
@@ -89,22 +83,12 @@ const links = ref<ButtonProps[]>([
 
       <template #description>
         <span class="block"
-          >Segurança, qualidade e precisão em cada detalhe com Equipe
+          >Segurança, qualidade e precisão em cada detalhe com equipe
           qualificada e acreditada pelo
         </span>
         <span class="block">
           <span class="text-primary-500">Inmetro</span>.
         </span>
-
-        <!-- <span class="mt-8 flex items-start gap-3">
-          <UIcon
-            name="i-lucide-shield-check"
-            class="size-7 shrink-0 text-white"
-          />
-          <span class="text-sm align-middle text-white/80">
-            Conformidade que garante segurança para você e para o seu veículo.
-          </span>
-        </span> -->
       </template>
     </UPageHero>
   </div>

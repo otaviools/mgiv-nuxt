@@ -45,11 +45,13 @@ const services = [
          <h2>: o componente fixa <h1> e a página já tem o <h1> do hero. -->
     <div class="relative py-8">
       <div
-        class="text-primary mb-2.5 flex items-center gap-1.5 text-sm font-semibold"
+        class="text-secondary-500 mb-5 block text-xs font-bold tracking-[0.1em] uppercase sm:text-sm"
       >
-        Qualidade
+        QUALIDADE
       </div>
-      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div
+        class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between"
+      >
         <h2 class="text-primary-700 text-3xl text-pretty font-bold sm:text-4xl">
           Serviços
         </h2>

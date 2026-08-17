@@ -80,13 +80,16 @@ const links = ref<ButtonProps[]>([
     :links="links"
   >
     <template #title>
-      <span class="text-primary-800">Fácil de chegar, sempre</span>
-      <span class="text-primary-500"> perto de você</span>
+      <span class="text-primary-800">Fácil acesso, </span>
+      <span class="text-primary-500"> perto de você !</span>
     </template>
     <div ref="mapSlot" class="w-full">
       <ClientOnly>
         <LazyAppLocalMap v-if="isMapVisible" :center="center" />
-        <div v-else class="bg-secondary-100 h-96 w-full animate-pulse rounded-lg" />
+        <div
+          v-else
+          class="bg-secondary-100 h-96 w-full animate-pulse rounded-lg"
+        />
 
         <template #fallback>
           <div class="bg-secondary-100 h-96 w-full animate-pulse rounded-lg" />

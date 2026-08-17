@@ -12,19 +12,16 @@ const isMenuOpen = ref(false);
 
 <template>
   <header
-    class="bg-(--ui-bg) sticky top-0 z-50 w-full border-b border-gray-200/60"
+    class="bg-default sticky top-0 z-50 w-full border-b border-gray-200/60"
     style="font-family: var(--font-sans)"
   >
     <UContainer class="flex h-20 items-center justify-between">
       <NuxtLink to="#inicio">
         <img src="./images/logo-4.svg" alt="Logo" class="h-12 w-auto" />
       </NuxtLink>
-
-      <!-- Entra pela direita deslizando para a esquerda (side="right"). -->
       <USlideover
         v-model:open="isMenuOpen"
         side="right"
-        title="Menu"
         :ui="{
           /* `duration`/`ease` alongam a animação de slide padrão (200ms). */
           content:
@@ -45,8 +42,6 @@ const isMenuOpen = ref(false);
         />
 
         <template #body>
-          <!-- Fecha no clique de qualquer link (delegação, o @click direto no
-               ULink não chega ao elemento renderizado). -->
           <nav class="flex flex-col gap-1" @click="isMenuOpen = false">
             <ULink
               v-for="link in menulinks"
