@@ -71,37 +71,39 @@ const features = ref<PageFeatureProps[]>([
 </script>
 
 <template>
-  <UPageSection
-    description="Nossa empresa é referência em inspeção e regularização veicular, oferecendo suporte técnico completo para quem busca segurança e conformidade legal."
-    headline="QUEM SOMOS & DIFERENCIAL"
-    orientation="horizontal"
-    :features="features"
-    :ui="{
-      description: 'text-secondary-600',
-      headline: 'text-secondary-500',
-      features: 'gap-8',
-      container: 'lg:items-start',
-      leadingIcon: 'size-7 text-primary-700',
-      wrapper: 'sm:mr-10',
-    }"
-  >
-    <template #title>
-      <span class="text-primary-800">Você regulariza seu</span>
-      <span class="text-primary-500"> veículo </span>
-      <span class="text-primary-800"> com conforto</span>
-    </template>
-    <div class="relative hidden sm:block mt-10">
-      <img
-        src="./images/fundoabout.png"
-        alt="Caminhão em inspeção veicular"
-        class="rounded-lg -scale-x-100"
-      />
-      <img
-        :src="caminhaoCutout"
-        alt=""
-        aria-hidden="true"
-        class="pointer-events-none absolute drop-shadow-2xl w-[80%] -bottom-2 -left-12"
-      />
-    </div>
-  </UPageSection>
+  <div class="bg-white">
+    <UPageSection
+      description="Nossa empresa é referência em inspeção e regularização veicular, oferecendo suporte técnico completo para quem busca segurança e conformidade legal."
+      headline="QUEM SOMOS & DIFERENCIAL"
+      orientation="horizontal"
+      :features="features"
+      :ui="{
+        description: 'text-secondary-600',
+        headline: 'text-secondary-500',
+        features: 'gap-8',
+        container: 'lg:items-start',
+        leadingIcon: 'size-7 text-primary-700',
+        wrapper: 'sm:mr-10',
+      }"
+    >
+      <template #title>
+        <span class="text-primary-800">Você regulariza seu</span>
+        <span class="text-primary-500"> veículo </span>
+        <span class="text-primary-800"> com conforto</span>
+      </template>
+      <div class="relative hidden sm:block mt-10">
+        <img
+          src="./images/fundoabout.png"
+          alt="Caminhão em inspeção veicular"
+          class="rounded-lg -scale-x-100"
+        />
+        <img
+          :src="caminhaoCutout"
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute drop-shadow-2xl w-[80%] -bottom-2 -left-12"
+        />
+      </div>
+    </UPageSection>
+  </div>
 </template>

@@ -48,7 +48,7 @@ const isMenuOpen = ref(false);
               :key="link.to"
               :to="link.to"
               inactive-class="text-secondary-700"
-              class="hover:bg-primary-50 hover:text-primary-600 rounded-lg px-3 py-3 text-base transition-colors duration-200"
+              class="rounded-lg px-3 py-3 text-base transition-colors duration-200"
             >
               {{ link.label }}
             </ULink>
@@ -56,13 +56,18 @@ const isMenuOpen = ref(false);
         </template>
       </USlideover>
 
-      <nav class="hidden md:flex gap-8">
+      <nav class="hidden md:flex items-center gap-8">
         <ULink
           v-for="link in menulinks"
           :key="link.to"
           :to="link.to"
           inactive-class="text-secondary-700 transition-colors duration-200"
-          class="text-sm"
+          class="inline-flex items-center text-sm"
+          :class="
+            link.to === '#contato'
+              ? 'rounded-lg bg-primary-500 px-4 py-2 text-white hover:bg-primary-700'
+              : ''
+          "
         >
           {{ link.label }}
         </ULink>

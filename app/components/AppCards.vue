@@ -40,7 +40,7 @@ const services = [
 </script>
 
 <template>
-  <UContainer class="py-16 sm:py-24 lg:py-32">
+  <UContainer class="mb-16 sm:mb-32">
     <div class="relative py-8">
       <div
         class="text-secondary-500 mb-5 block text-xs font-bold uppercase sm:text-sm"

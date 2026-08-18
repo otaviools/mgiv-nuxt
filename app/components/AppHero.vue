@@ -2,8 +2,6 @@
 import type { ButtonProps } from "@nuxt/ui";
 import heroBackground from "./images/backgroundhero.webp";
 
-// Imagem do LCP: o preload adianta o download para antes do CSS/JS resolverem
-// o `<img>`, sem mudar nada do que é renderizado.
 useHead({
   link: [
     {
