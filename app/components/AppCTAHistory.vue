@@ -18,7 +18,7 @@ const items = [
       description: 'text-secondary-600 sm:mb-10',
       title: 'sm:mb-10',
       root: 'ring-0',
-      wrapper: 'mr-0 sm:mr-20',
+      wrapper: 'mr-0 sm:mr-30',
       container: 'px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32',
     }"
     description="A trajetória da MGIV teve início em 28 de agosto de 2018, com a missão clara de oferecer mais segurança e conformidade técnica para os motoristas e transportadores que cruzam as estradas mineiras."
@@ -27,7 +27,7 @@ const items = [
   >
     <template #title>
       <span
-        class="text-secondary-500 mb-5 block text-xs font-bold tracking-[0.1em] uppercase sm:text-sm"
+        class="text-secondary-500 mb-5 block text-xs font-bold uppercase sm:text-sm"
       >
         Quem somos
       </span>

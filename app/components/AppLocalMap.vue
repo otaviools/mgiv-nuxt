@@ -14,7 +14,7 @@ defineProps<{ center: [number, number] }>();
   <Map
     :center="center"
     :zoom="13.2"
-    class="h-96 w-full rounded-lg"
+    class="h-96 w-full rounded-lg shadow-sm"
     :scroll-zoom="false"
     theme="light"
   >

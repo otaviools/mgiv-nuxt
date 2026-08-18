@@ -41,11 +41,9 @@ const services = [
 
 <template>
   <UContainer class="py-16 sm:py-24 lg:py-32">
-    <!-- Marcação equivalente à do UPageHeader (mesmas classes), só que com
-         <h2>: o componente fixa <h1> e a página já tem o <h1> do hero. -->
     <div class="relative py-8">
       <div
-        class="text-secondary-500 mb-5 block text-xs font-bold tracking-[0.1em] uppercase sm:text-sm"
+        class="text-secondary-500 mb-5 block text-xs font-bold uppercase sm:text-sm"
       >
         QUALIDADE
       </div>
@@ -64,7 +62,9 @@ const services = [
           root: 'rounded-2xl ring-1 ring-gray-200/70 shadow-sm',
           title: 'text-secondary-700',
           description: 'text-secondary-500',
-          leadingIcon: 'size-7',
+          leading:
+            'flex size-12 items-center justify-center rounded-xl bg-primary-100',
+          leadingIcon: 'size-7 text-primary-700',
         }"
         v-for="service in services"
         :key="service.title"

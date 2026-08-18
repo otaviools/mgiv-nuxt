@@ -27,7 +27,7 @@ const cards = ref([
           /* Sem padding horizontal para o primeiro número encostar na mesma
              borda esquerda do container (título e descrição). */
           container: 'items-start text-center px-0 py-2 sm:px-0 sm:py-6',
-          title: 'text-primary-600 text-3xl sm:text-4xl',
+          title: 'text-primary-700 font-bold text-3xl sm:text-5xl',
           description: 'text-secondary-700 text-xs sm:text-sm',
         }"
         v-for="(card, index) in cards"

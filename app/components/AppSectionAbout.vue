@@ -38,6 +38,9 @@ const features = ref<PageFeatureProps[]>([
     icon: "lucide-badge-check",
     ui: {
       title: "text-secondary-900",
+      leading:
+        "flex size-12 items-center justify-center rounded-xl bg-primary-100 p-4",
+      leadingIcon: "size-7 text-primary-700",
     },
   },
   {
@@ -47,6 +50,9 @@ const features = ref<PageFeatureProps[]>([
     icon: "lucide-cog",
     ui: {
       title: "text-secondary-900",
+      leading:
+        "flex size-12 items-center justify-center rounded-xl bg-primary-100 p-4",
+      leadingIcon: "size-7 text-primary-700",
     },
   },
   {
@@ -56,6 +62,9 @@ const features = ref<PageFeatureProps[]>([
     icon: "lucide-armchair",
     ui: {
       title: "text-secondary-900",
+      leading:
+        "flex size-12 items-center justify-center rounded-xl bg-primary-100 p-4",
+      leadingIcon: "size-7 text-primary-700",
     },
   },
 ]);
@@ -63,27 +72,25 @@ const features = ref<PageFeatureProps[]>([
 
 <template>
   <UPageSection
-    title="Você regulariza seu veículo com conforto"
     description="Nossa empresa é referência em inspeção e regularização veicular, oferecendo suporte técnico completo para quem busca segurança e conformidade legal."
     headline="QUEM SOMOS & DIFERENCIAL"
     orientation="horizontal"
     :features="features"
     :ui="{
-      title: 'text-primary-800',
       description: 'text-secondary-600',
       headline: 'text-secondary-500',
       features: 'gap-8',
       container: 'lg:items-start',
-      leadingIcon: 'size-7',
+      leadingIcon: 'size-7 text-primary-700',
       wrapper: 'sm:mr-10',
     }"
   >
     <template #title>
-      <span class="text-primary-700">Você regulariza seu</span>
+      <span class="text-primary-800">Você regulariza seu</span>
       <span class="text-primary-500"> veículo </span>
-      <span class="text-primary-700"> com conforto</span>
+      <span class="text-primary-800"> com conforto</span>
     </template>
-    <div class="relative">
+    <div class="relative hidden sm:block mt-10">
       <img
         src="./images/fundoabout.png"
         alt="Caminhão em inspeção veicular"
@@ -93,7 +100,7 @@ const features = ref<PageFeatureProps[]>([
         :src="caminhaoCutout"
         alt=""
         aria-hidden="true"
-        class="pointer-events-none absolute drop-shadow-2xl w-[85%] -bottom-2 -left-15"
+        class="pointer-events-none absolute drop-shadow-2xl w-[80%] -bottom-2 -left-12"
       />
     </div>
   </UPageSection>

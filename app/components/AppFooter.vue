@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui";
-
 const items: NavigationMenuItem[] = [
   { label: "Início", to: "#inicio" },
   { label: "Sobre", to: "#sobre" },
@@ -27,20 +26,20 @@ const items: NavigationMenuItem[] = [
 
       <template #right>
         <UButton
-          icon="i-simple-icons-instagram"
-          color="neutral"
-          variant="ghost"
-          to="https://instagram.com"
-          target="_blank"
-          aria-label="Instagram"
-        />
-        <UButton
           icon="i-simple-icons-google"
           color="neutral"
           variant="ghost"
           to="https://google.com"
           target="_blank"
           aria-label="Google"
+        />
+        <UButton
+          icon="i-simple-icons-instagram"
+          color="neutral"
+          variant="ghost"
+          to="https://instagram.com"
+          target="_blank"
+          aria-label="Instagram"
         />
       </template>
     </UFooter>
