@@ -34,7 +34,7 @@ const form = reactive({
         laudos técnicos e inspeções. Preencha o formulário ou envie para
         <a
           href="mailto:gerencia.mgiv@hotmail.com"
-          class="text-primary-500 font-medium"
+          class="text-primary-500 font-medium underline"
           >gerencia.mgiv@hotmail.com</a
         >
       </template>

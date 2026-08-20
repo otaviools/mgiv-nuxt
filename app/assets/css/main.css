@@ -10,5 +10,5 @@
 
   /* Altura real do header fixo: h-20 (5rem) + 1px da borda inferior.
      Usada como scroll-margin-top das seções para as âncoras encaixarem exatas. */
-  --header-h: calc(5rem + 1px);
+  --header-h: calc(6rem + 1px);
 }

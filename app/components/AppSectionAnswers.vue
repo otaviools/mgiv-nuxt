@@ -22,62 +22,66 @@ const items = [
 </script>
 
 <template>
-  <UContainer
-    class="grid grid-cols-1 sm:grid-cols-2 sm:items-start relative isolate py-16 sm:py-24 lg:py-32 overflow-hidden"
-  >
-    <div class="text-left">
-      <div class="flex flex-col items-left gap-4">
-        <span
-          class="text-secondary-500 text-center sm:text-left block text-xs font-bold uppercase sm:text-sm"
-        >
-          TIRE SUAS DÚVIDAS
-        </span>
-        <h2
-          class="text-primary-700 text-2xl text-center sm:text-left text-pretty font-bold sm:text-4xl mb-4 sm:mb-8"
-        >
-          <span class="text-primary-800"> Perguntas </span>
-          <span class="text-primary-500"> Frequentes </span>
-        </h2>
-        <UPageCard
-          title="Contato"
-          :ui="{
-            root: 'w-full max-w-[480px] p-2 ring-1 ring-gray-300/60 mb-10 sm:mb-none',
-            title: 'text-primary-800 mb-4',
-            description: 'text-secondary-600',
-          }"
-        >
-          <template #description>
-            Ficou com alguma dúvida? Entre em contato com nossa equipe pelo
-            Whatsapp
-            <a
-              href="https://wa.me/5534988248472"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-primary-500"
-              >(34) 98824-8472</a
-            >
-            - Marcelo Administrador
-          </template>
-        </UPageCard>
-      </div>
-    </div>
+  <div class="bg-primary-100 relative">
+    <AppSectionDivider class="h-16 text-(--ui-bg) sm:h-30" />
 
-    <UAccordion
-      type="multiple"
-      :items="items"
-      :unmount-on-hide="false"
-      :default-value="['0']"
-      :ui="{
-        root: 'flex flex-col gap-3 w-full self-center',
-        item: 'rounded-lg ring-1 bg-white p-2  ring-gray-200/70  border-b-0',
-        trigger: 'text-secondary-700 text-base font-semibold p-4',
-        body: 'text-secondary-500 text-base px-4',
-      }"
+    <UContainer
+      class="grid grid-cols-1 sm:grid-cols-2 sm:items-start relative isolate py-16 sm:py-24 lg:py-32 overflow-hidden"
     >
-      <template #default="{ item }">
-        <span class="text-primary-500">{{ item.number }}</span>
-        {{ item.label }}
-      </template>
-    </UAccordion>
-  </UContainer>
+      <div class="text-left">
+        <div class="flex flex-col items-left gap-4">
+          <span
+            class="text-secondary-500 text-center sm:text-left block text-xs font-bold uppercase sm:text-sm"
+          >
+            TIRE SUAS DÚVIDAS
+          </span>
+          <h2
+            class="text-primary-700 text-2xl text-center sm:text-left text-pretty font-bold sm:text-4xl mb-4 sm:mb-8"
+          >
+            <span class="text-primary-800"> Perguntas </span>
+            <span class="text-primary-500"> Frequentes </span>
+          </h2>
+          <UPageCard
+            title="Contato"
+            :ui="{
+              root: 'w-full max-w-[480px] p-2 ring-1 ring-gray-300/60 mb-10 sm:mb-none',
+              title: 'text-primary-800 mb-4',
+              description: 'text-secondary-600',
+            }"
+          >
+            <template #description>
+              Ficou com alguma dúvida? Entre em contato com nossa equipe pelo
+              Whatsapp
+              <a
+                href="https://wa.me/5534988248472"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary-500 underline"
+                >(34) 98824-8472</a
+              >
+              - Marcelo Administrador
+            </template>
+          </UPageCard>
+        </div>
+      </div>
+
+      <UAccordion
+        type="multiple"
+        :items="items"
+        :unmount-on-hide="false"
+        :default-value="['0']"
+        :ui="{
+          root: 'flex flex-col gap-3 w-full self-center',
+          item: 'rounded-lg ring-1 bg-white p-2  ring-gray-200/70  border-b-0',
+          trigger: 'text-secondary-700 text-base font-semibold p-4',
+          body: 'text-secondary-500 text-base px-4',
+        }"
+      >
+        <template #default="{ item }">
+          <span class="text-primary-500">{{ item.number }}</span>
+          {{ item.label }}
+        </template>
+      </UAccordion>
+    </UContainer>
+  </div>
 </template>
