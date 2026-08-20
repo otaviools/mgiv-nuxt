@@ -6,7 +6,7 @@
   <AppCards id="servicos" class="scroll-mt-(--header-h)" />
   <AppSectionAbout id="sobre" class="scroll-mt-(--header-h)" />
   <AppSectionLocal id="local" class="scroll-mt-(--header-h)" />
-  <AppSectionAnswers />
+  <AppSectionAnswers id="faq" class="scroll-mt-(--header-h)" />
   <AppContact id="contato" class="scroll-mt-(--header-h)" />
   <AppFooter />
 </template>

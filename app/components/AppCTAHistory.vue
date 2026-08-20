@@ -1,15 +1,7 @@
 <script setup lang="ts">
 import faixadaprincipal from "./images/faixadaprincipal.webp";
-import faixadasecundaria from "./images/faixadasecundaria.webp";
 
-const items = [
-  { src: faixadaprincipal, class: "basis-2/3" },
-  { src: faixadasecundaria, class: "basis-2/3" },
-  { src: faixadaprincipal, class: "basis-2/3" },
-  { src: faixadasecundaria, class: "basis-2/3" },
-  { src: faixadaprincipal, class: "basis-2/3" },
-  { src: faixadasecundaria, class: "basis-2/3" },
-];
+const items = [{ src: faixadaprincipal, class: "basis-full" }];
 </script>
 
 <template>
@@ -43,12 +35,12 @@ const items = [
       loop
       :watch-drag="false"
       :items="items"
-      :ui="{ item: 'basis-1/3' }"
+      :ui="{ item: 'basis-full' }"
     >
       <img
         :src="item.src"
         alt="Instalações e serviços da MGIV"
-        width="900"
+        width="1200"
         height="600"
         class="h-full w-full rounded-lg object-cover"
         loading="lazy"

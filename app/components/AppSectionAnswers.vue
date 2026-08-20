@@ -19,31 +19,27 @@ const items = [
 </script>
 
 <template>
-  <div class="bg-white py-10">
-    <UContainer class="mb-16">
-      <div class="relative py-8 text-left sm:text-center">
-        <div class="flex flex-col items-left gap-4 sm:items-center">
-          <h2
-            class="text-primary-700 text-3xl text-pretty font-bold sm:text-4xl"
-          >
-            <span class="text-primary-800"> Perguntas </span>
-            <span class="text-primary-500"> Frequentes </span>
-          </h2>
-        </div>
+  <UContainer class="relative isolate mb-30 overflow-hidden">
+    <div class="relative py-8 text-left sm:text-center">
+      <div class="flex flex-col items-left gap-4 sm:items-center">
+        <h2 class="text-primary-700 text-3xl text-pretty font-bold sm:text-4xl">
+          <span class="text-primary-800"> Perguntas </span>
+          <span class="text-primary-500"> Frequentes </span>
+        </h2>
       </div>
+    </div>
 
-      <UAccordion
-        type="multiple"
-        :items="items"
-        :unmount-on-hide="false"
-        :default-value="['0']"
-        :ui="{
-          root: 'mx-auto flex flex-col gap-3 w-full sm:w-1/2',
-          item: 'rounded-lg  ring-gray-200/70  border-b-0',
-          trigger: 'text-secondary-700 text-base font-semibold p-4',
-          body: 'text-secondary-500 text-base px-4',
-        }"
-      />
-    </UContainer>
-  </div>
+    <UAccordion
+      type="multiple"
+      :items="items"
+      :unmount-on-hide="false"
+      :default-value="['0']"
+      :ui="{
+        root: 'mx-auto flex flex-col gap-3 w-full sm:w-1/2',
+        item: 'rounded-lg  ring-gray-200/70  border-b-0',
+        trigger: 'text-secondary-700 text-base font-semibold p-4',
+        body: 'text-secondary-500 text-base px-4',
+      }"
+    />
+  </UContainer>
 </template>

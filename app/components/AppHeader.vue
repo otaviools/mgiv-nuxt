@@ -23,9 +23,7 @@ const isMenuOpen = ref(false);
         v-model:open="isMenuOpen"
         side="right"
         :ui="{
-          /* `duration`/`ease` alongam a animação de slide padrão (200ms). */
           content:
-            /* `divide-y-0` remove a linha padrão entre o header (X) e o corpo. */
             'w-72 max-w-[80vw] divide-y-0 data-[state=open]:animate-[slide-in-from-right_400ms_ease-out] data-[state=closed]:animate-[slide-out-to-right_300ms_ease-in]',
           overlay:
             'backdrop-blur-sm data-[state=open]:animate-[fade-in_400ms_ease-out] data-[state=closed]:animate-[fade-out_300ms_ease-in]',
