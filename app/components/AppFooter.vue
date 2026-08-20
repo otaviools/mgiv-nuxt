@@ -11,7 +11,7 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <UContainer class="sm:pt-24 lg:pt-32">
+  <UContainer class="pt-16 sm:pt-24 lg:pt-32">
     <UFooter class="text-secondary-600">
       <template #left>
         <p class="text-muted text-sm">

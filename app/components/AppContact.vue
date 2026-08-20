@@ -57,7 +57,7 @@ const form = reactive({
               placeholder="Nome Sobrenome"
               class="w-full"
               :ui="{
-                base: 'text-secondary-900 py-3 ps-12 ring-secondary-300 placeholder:text-secondary-400 focus-visible:ring-primary-600',
+                base: 'text-secondary-900 py-3 ps-12 ring-secondary-200 placeholder:text-secondary-400 focus-visible:ring-primary-600',
                 leading: 'ps-4',
               }"
             />
@@ -76,7 +76,7 @@ const form = reactive({
               placeholder="nome@email.com"
               class="w-full"
               :ui="{
-                base: 'text-secondary-900 py-3 ps-12 ring-secondary-300 placeholder:text-secondary-400',
+                base: 'text-secondary-900 py-3 ps-12 ring-secondary-200 placeholder:text-secondary-400',
                 leading: 'ps-4',
               }"
             />
@@ -94,7 +94,7 @@ const form = reactive({
               placeholder="34999999999"
               class="w-full"
               :ui="{
-                base: 'text-secondary-900 py-3 ps-12 ring-secondary-300 placeholder:text-secondary-400',
+                base: 'text-secondary-900 py-3 ps-12 ring-secondary-200 placeholder:text-secondary-400',
                 leading: 'ps-4',
               }"
             />
@@ -112,7 +112,7 @@ const form = reactive({
               placeholder="O que você precisa ?"
               class="w-full"
               :ui="{
-                base: 'text-secondary-900 py-3 ps-12 ring-secondary-300 placeholder:text-secondary-400',
+                base: 'text-secondary-900 py-3 ps-12 ring-secondary-200 placeholder:text-secondary-400',
                 leading: 'ps-4',
               }"
             />

@@ -4,6 +4,7 @@ const menulinks = [
   { label: "Quem somos", to: "#historia" },
   { label: "Serviços", to: "#servicos" },
   { label: "Local", to: "#local" },
+  { label: "FAQ", to: "#faq" },
   { label: "Contato", to: "#contato" },
 ];
 
